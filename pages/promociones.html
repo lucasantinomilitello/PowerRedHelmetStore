@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Power Rangers, Red Ranger, Casco, Venta, Tienda">
+    <meta name="description" content="Sitio web de ventas de cascos de los Red Power Rangers">
+<!-- Iconos -->
+ <script src="https://kit.fontawesome.com/7401713c45.js" crossorigin="anonymous"></script>
+<!-- Logo -->
+ <link rel="shortcut icon" href="../img/Rayo.png" type="image/png">
+<!-- CSS -->
+ <link rel="stylesheet" href="../css/style.css">
+<!-- Titulo -->
+ <title>Promociones - Power Red Helmet Store</title>
+</head>
+
+
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <ul class="menu left">
+    <li><a href="/index.html">Inicio</a></li>
+    <li><a href="../pages/productos.html">Productos</a></li>
+  </ul>
+
+  <div class="brand">
+    <img src="../img/PowerRedHelmetStore.png" alt="Power Red Helmet Store" class="logo">
+  </div>
+
+  <ul class="menu right">
+    <li><a href="../pages/nosotros.html">Nosotros</a></li>
+    <li><a href="../pages/contacto.html">Contacto</a></li>
+
+<!-- Carrito -->
+<li class="cart-container">
+  <a href="#" id="cart-link">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </a>
+
+<!-- Mini carrito desplegable -->
+  <div id="mini-cart" class="mini-cart">
+    <h4>Carrito</h4>
+    <ul id="cart-items"></ul>
+    <p id="cart-empty">El carrito está vacío</p>
+    <p id="cart-total">Total: $0</p>
+  </div>
+</li>
+</nav>
+<!-- Fin de la sección -->
+
+
+<!-- Sección Promociones -->
+<section class="promotions-section">
+  <h2 class="products-title">Promociones Especiales</h2>
+
+  <div class="products-grid">
+    <div class="product-card" data-promo="half-second">
+      <img src="../img/MightyMorphin.jpg" alt="Mighty Morphin">
+      <h3 class="product-name">Mighty Morphin</h3>
+      <p class="product-price" data-price="15000">$15.000</p>
+      <span class="promo-label">Llevá 2 productos y obtené 50% en el segundo</span>
+      <input type="number" class="qty-input" min="0" value="0">
+      <p class="card-subtotal">Subtotal: $0</p>
+      <p class="card-discount">Descuento: $0</p>
+      <p class="card-total">Total: $0</p>
+      <button class="add-to-cart">Agregar al carrito</button>
+    </div>
+
+
+    <div class="product-card" data-promo="3x2">
+      <img src="../img/TimeForce.jpg" alt="Time Force">
+      <h3 class="product-name">Time Force</h3>
+      <p class="product-price" data-price="9000">$9.000</p>
+      <span class="promo-label">3x2 en productos seleccionados</span>
+      <input type="number" class="qty-input" min="0" value="0">
+      <p class="card-subtotal">Subtotal: $0</p>
+      <p class="card-discount">Descuento: $0</p>
+      <p class="card-total">Total: $0</p>
+      <button class="add-to-cart">Agregar al carrito</button>
+    </div>
+
+
+
+    <div class="product-card" data-promo="3x2">
+      <img src="../img/DinoThunder.jpg" alt="Dino Thunder">
+      <h3 class="product-name">Dino Thunder</h3>
+      <p class="product-price" data-price="10000">$10.000</p>
+      <span class="promo-label">3x2 en productos seleccionados</span>
+      <input type="number" class="qty-input" min="0" value="0">
+      <p class="card-subtotal">Subtotal: $0</p>
+      <p class="card-discount">Descuento: $0</p>
+      <p class="card-total">Total: $0</p>
+      <button class="add-to-cart">Agregar al carrito</button>
+    </div>
+
+
+    <div class="product-card" data-promo="20off50k">
+      <img src="../img/S.P.D..jpg" alt="S.P.D.">
+      <h3 class="product-name">S.P.D.</h3>
+      <p class="product-price" data-price="10000">$10.000</p>
+      <span class="promo-label">20% de descuento por compras superiores a $50.000</span>
+      <input type="number" class="qty-input" min="0" value="0">
+      <p class="card-subtotal">Subtotal: $0</p>
+      <p class="card-discount">Descuento: $0</p>
+      <p class="card-total">Total: $0</p>
+      <button class="add-to-cart">Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+<!-- Fin de la sección -->
+
+
+
+<!-- Redes Sociales -->
+  <section class="social-section">
+    <h2 class="social-title">Seguinos en nuestras redes sociales</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/powerrangers/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/pwrrngr?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/powerrangers/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/tag/powerrangers?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </section>
+</main>
+<!-- Fin de la sección -->
+
+
+<!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Luca Militello. Todos los derechos reservados.</p>
+  </footer>
+
+
+<!-- JS -->
+  <script src="../js/carrito.js"></script>
+  <script src="../js/promociones.js"></script>
+</body>
+</html>

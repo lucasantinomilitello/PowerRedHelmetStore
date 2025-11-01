@@ -16,6 +16,7 @@
     <title>Productos - Power Red Helmet Store</title>
 </head>
 
+
 <body>
 <!-- Navbar -->
 <nav class="navbar">
@@ -29,10 +30,27 @@
   </div>
 
   <ul class="menu right">
-    <li><a href="./nosotros.html">Nosotros</a></li>
-    <li><a href="./contacto.html">Contacto</a></li>
-  </ul>
+    <li><a href="../pages/nosotros.html">Nosotros</a></li>
+    <li><a href="../pages/contacto.html">Contacto</a></li>
+
+<!-- Carrito -->
+<li class="cart-container">
+  <a href="#" id="cart-link">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Mini carrito desplegable -->
+  <div id="mini-cart" class="mini-cart">
+    <h4>Carrito</h4>
+    <ul id="cart-items"></ul>
+    <p id="cart-empty">El carrito está vacío</p>
+    <p id="cart-total">Total: $0</p>
+  </div>
+</li>
 </nav>
+<!-- Fin de la sección -->
+
 
 <!-- Sección Productos -->
 <section class="products-section">
@@ -40,80 +58,74 @@
 
     <div class="products-grid">
       <div class="product-card">
-        <img src="../img/MightyMorphin.jpg" alt="Mighty Morphin">
-        <h3 class="product-name">Mighty Morphin</h3>
-        <p class="product-price">$30.000</p>
-      </div>
-
-      <div class="product-card">
         <img src="../img/Zeo.jpg" alt="Zeo">
         <h3 class="product-name">Zeo</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$7.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
 
       <div class="product-card">
         <img src="../img/Turbo.jpg" alt="Turbo">
         <h3 class="product-name">Turbo</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$5.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
 
       <div class="product-card">
         <img src="../img/Space.jpg" alt="Space">
         <h3 class="product-name">In Space</h3>
-        <p class="product-price">$30.000</p>
-      </div>
-
-      <div class="product-card">
-        <img src="../img/TimeForce.jpg" alt="Time Force">
-        <h3 class="product-name">Time Force</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$10.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
 
       <div class="product-card">
         <img src="../img/WildForce.jpg" alt="Wild Force">
         <h3 class="product-name">Wild Force</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$8.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
 
       <div class="product-card">
         <img src="../img/NinjaStorm.jpg" alt="Ninja Storm">
         <h3 class="product-name">Ninja Storm</h3>
-        <p class="product-price">$30.000</p>
-      </div>
-
-      <div class="product-card">
-        <img src="../img/DinoThunder.jpg" alt="Dino Thunder">
-        <h3 class="product-name">Dino Thunder</h3>
-        <p class="product-price">$30.000</p>
-      </div>
-
-      <div class="product-card">
-        <img src="../img/S.P.D..jpg" alt="S.P.D.">
-        <h3 class="product-name">S.P.D.</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$10.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
 
       <div class="product-card">
         <img src="../img/MysticForce.jpg" alt="Mystic Force">
         <h3 class="product-name">Mystic Force</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$5.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
 
       <div class="product-card">
         <img src="../img/JungleFury.jpg" alt="Jungle Fury">
         <h3 class="product-name">Jungle Fury</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$5.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
 
       <div class="product-card">
         <img src="../img/Megaforce.jpg" alt="Megaforce">
         <h3 class="product-name">Megaforce</h3>
-        <p class="product-price">$30.000</p>
+        <p class="product-price">$8.000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
       </div>
     </div>
   </section>
+<!-- Fin de la sección -->
 
-  <!-- Redes Sociales -->
+
+<!-- Seccion para acceder a Promociones -->
+ <section class="promo-access">
+  <h3>Accedé a nuestras promociones</h3>
+  <a href="../pages/promociones.html" class="promo-btn">Ver Promociones</a>
+</section>
+<!-- Fin de la sección -->
+
+
+<!-- Redes Sociales -->
   <section class="social-section">
     <h2 class="social-title">Seguinos en nuestras redes sociales</h2>
     <div class="social-icons">
@@ -124,10 +136,17 @@
     </div>
   </section>
 </main>
+<!-- Fin de la sección -->
+
 
 <!-- Footer -->
 <footer class="site-footer">
   <p>© 2025 Luca Militello. Todos los derechos reservados.</p>
 </footer>
+<!-- Fin de la sección -->
+
+
+<!-- JS -->
+  <script src="../js/carrito.js"></script>
 </body>
 </html>

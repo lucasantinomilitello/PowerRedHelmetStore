@@ -80,6 +80,108 @@ main {
   color: white;
 }
 
+/* Carrito */
+.cart-container {
+  list-style: none;
+  position: absolute;  
+  right: 30px;         
+  top: 50%;            
+  transform: translateY(-50%);
+  z-index: 1001;       
+}
+
+#cart-link {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 7px;
+  border-radius: 50%;
+}
+
+/* Mini carrito*/
+.mini-cart {
+  display: none; 
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  background-color: grey;
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 25px black;
+  z-index: 1002;
+  overflow-y: auto;
+}
+
+.mini-cart h4 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0 0 5px #EE0707;
+}
+
+.mini-cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mini-cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #EE0707;
+  font-size: 17px;
+}
+
+.mini-cart li button {
+  background: #EE0707;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.mini-cart li button:hover {
+  background: white;
+  color: #EE0707;
+}
+
+#cart-total {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+#cart-empty {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 /* --- Responsive Navbar --- */
 @media (max-width: 768px) {
   .navbar {
@@ -97,9 +199,9 @@ main {
     width: 100%;
     gap: 10px;
     background: #EE0707;
-    transition: max-height 0.3s ease;
-    overflow: hidden;
     max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
 
   .menu.left,
@@ -137,24 +239,59 @@ main {
   .logo {
     height: 90px;
   }
+
+  /* Carrito Responsive */
+  .cart-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1003;
+  }
+
+  #cart-link {
+    font-size: 28px;
+  }
+
+  /* Mini carrito Responsive */
+  .mini-cart {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 90%;
+    max-height: 300px;
+    margin-top: 5px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    display: none;
+    overflow-y: auto;
+    z-index: 1004;
+  }
+
+  .mini-cart h4 { font-size: 20px; }
+  .mini-cart li { font-size: 14px; }
+  #cart-total { font-size: 16px; }
 }
 
 @media (max-width: 480px) {
-  .menu li a {
-    font-size: 24px;
-  }
-
-  .logo {
-    height: 80px;
-  }
-
-  .navbar::before {
-    top: 25px;
-    font-size: 32px;
+  .menu li a { font-size: 24px; }
+  .logo { height: 80px; }
+  .navbar::before { top: 25px; font-size: 32px; }
+  #cart-link { font-size: 24px; }
+  .mini-cart {
+    width: 90%;
+    right: 5%;
+    max-height: 250px;
   }
 }
 
+
 /* ------------------------------------------ */
+
 
 /* Sección Inicio Ranger*/
 .ranger-section {
@@ -198,7 +335,9 @@ main {
   display: block;
 }
 
+
 /* ------------------------------------------ */
+
 
 /* Sección Nosotros */
 .about-section {
@@ -274,7 +413,9 @@ main {
   color: #EE0707;
 }
 
+
 /* ------------------------------------------ */
+
 
 /* Sección Contacto */
 .contact-section {
@@ -374,7 +515,8 @@ main {
   background: #ff1a1a;
 }
 
-/* --- Responsive Navbar --- */
+
+/* --- Contacto Responsive --- */
 @media (max-width: 1024px) {
   .contact-title {
     font-size: 45px;
@@ -449,11 +591,13 @@ main {
   }
 }
 
+
 /* ------------------------------------------ */
+
 
 /* Sección Productos */
 .products-section {
-  padding: 150px 30px;
+  padding: 150px 30px 20px 30px;
   color: white;
   text-align: center;
   flex: 1 0 auto;
@@ -491,7 +635,6 @@ main {
   height: 250px;
   object-fit: contain;
   background-color: white;
-  
 }
 
 .product-name {
@@ -503,13 +646,207 @@ main {
 
 .product-price {
   font-size: 25px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Hauser Bold', cursive;
   margin-bottom: 15px;
   color: #EE0707;
   font-weight: bold;
 }
 
+/* Botón Agregar al Carrito */
+.add-to-cart {
+  background-color: black;
+  color: #EE0707;
+  border: 3px solid #EE0707;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.add-to-cart:hover {
+  background-color: #EE0707;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(119, 7, 7, 0.89);
+}
+
+/* Mensaje Carrito */
+.mensaje-carrito {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #EE0707;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(238, 7, 7, 0.7);
+  font-family: 'Hauser Bold', cursive;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.mensaje-carrito.oculto {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+/* Sección Promocional */
+.promo-access {
+  text-align: center;
+  margin-top: 0; 
+  margin-bottom: 60px;
+  padding: 0; 
+  color: white;
+}
+
+
+.promo-access h3 {
+  font-size: 35px;
+  font-family: 'Hauser Bold', cursive;
+  margin: 30px 0 20px 0;
+  text-shadow: 0 0 10px #EE0707;
+}
+
+.promo-btn {
+  display: inline-block;
+  color: white;
+  border: 2px solid #EE0707;
+  background-color: grey;
+  text-decoration: none;
+  padding: 12px 35px;
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.promo-btn:hover {
+  background-color: #EE0707;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(238, 7, 7, 0.6);
+}
+
+
 /* ------------------------------------------ */
+
+
+/* Sección Promociones */
+.promotions-section {
+  padding: 180px 30px 50px 30px;
+  text-align: center;
+  color: white;
+}
+
+.products-title {
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-family: 'Hauser Bold', cursive;
+  text-shadow: 0 0 15px #EE0707;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #414141;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(238, 7, 7, 0.5);
+  transition: transform 0.3s ease;
+  padding-bottom: 15px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background-color: white;
+}
+
+.product-name {
+  font-size: 28px;
+  font-family: 'Hauser Bold', cursive;
+  margin: 15px 0 5px 0;
+  color: white;
+}
+
+.product-price {
+  font-size: 25px;
+  font-family: 'Hauser Bold', cursive;
+  margin-bottom: 5px;
+  color: #EE0707;
+  font-weight: bold;
+}
+
+.promo-label {
+  display: block;
+  font-size: 18px;
+  font-family: 'Hauser Bold', cursive;
+  color: #FFD700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #EE0707;
+}
+
+.qty-input {
+  width: 60px;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #EE0707;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-subtotal,
+.card-discount,
+.card-total {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #FFD700;
+}
+
+.add-to-cart {
+  background-color: black;
+  color: #EE0707;
+  border: 3px solid #EE0707;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.add-to-cart:hover {
+  background-color: #EE0707;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(119, 7, 7, 0.89);
+}
+
+
+
+/* ------------------------------------------ */
+
 
 /* Redes Sociales */
 .social-section {
@@ -555,7 +892,9 @@ main {
   transform: scale(1.1);
 }
 
+
 /* ------------------------------------------ */
+
 
 /* Footer */
 .site-footer {

@@ -16,6 +16,7 @@
     <title>Power Red Helmet Store</title>
 </head>
 
+
 <body>
 <!-- Navbar -->
 <nav class="navbar">
@@ -31,8 +32,25 @@
   <ul class="menu right">
     <li><a href="./pages/nosotros.html">Nosotros</a></li>
     <li><a href="./pages/contacto.html">Contacto</a></li>
-  </ul>
+
+<!-- Carrito -->
+<li class="cart-container">
+  <a href="#" id="cart-link">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </a>
+
+<!-- Mini carrito desplegable -->
+  <div id="mini-cart" class="mini-cart">
+    <h4>Carrito</h4>
+    <ul id="cart-items"></ul>
+    <p id="cart-empty">El carrito está vacío</p>
+    <p id="cart-total">Total: $0</p>
+  </div>
+</li>
 </nav>
+<!-- Fin de la sección -->
+
 
 <!-- Sección Inicio Ranger -->
 <section class="ranger-section">
@@ -44,6 +62,8 @@
   
   <p>Descubrí nuestro local y sumergite en el universo de los Power Rangers. En Power Red Helmet Store vas a poder encontrar los cascos de tus Red Rangers favoritos.</p>
 </section>
+<!-- Fin de la sección -->
+
 
 <!-- Redes Sociales -->
 <section class="social-section">
@@ -55,10 +75,17 @@
     <a href="https://www.tiktok.com/tag/powerrangers?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
   </div>
 </section>
+<!-- Fin de la sección -->
+
 
 <!-- Footer -->
 <footer class="site-footer">
     <p>© 2025 Luca Militello. Todos los derechos reservados.</p>
 </footer>
+<!-- Fin de la sección -->
+
+
+<!-- JS -->
+  <script src="./js/carrito.js"></script>
 </body>
 </html>
